@@ -1,9 +1,10 @@
 {
   "name": "synapse-monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.12.0",
   "author": "Augusto Sandim",
+  "description": "Synapse Monorepo",
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0",
