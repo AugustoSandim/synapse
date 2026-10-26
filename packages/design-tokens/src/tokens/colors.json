@@ -1,0 +1,17 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "$value": "#E50914", "$type": "color" },
+      "secondary": { "$value": "#141414", "$type": "color" }
+    },
+    "surface": {
+      "background": { "$value": "#0A0A0A", "$type": "color" },
+      "card": { "$value": "#181818", "$type": "color" },
+      "border": { "$value": "#2A2A2A", "$type": "color" }
+    },
+    "text": {
+      "primary": { "$value": "#FFFFFF", "$type": "color" },
+      "muted": { "$value": "#8C8C8C", "$type": "color" }
+    }
+  }
+}
