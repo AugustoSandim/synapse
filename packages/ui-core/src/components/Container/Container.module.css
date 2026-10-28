@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.spacingSmall {
+  gap: 8px;
+}
+
+.spacingMedium {
+  gap: 16px;
+}
+
+.spacingLarge {
+  gap: 24px;
+}

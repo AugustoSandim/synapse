@@ -1,0 +1,58 @@
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background-color: var(--color-surface-card, #181818);
+  border: 1px solid var(--color-surface-border, #2a2a2a);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 600px;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-brand-primary, #e50914);
+  color: var(--color-text-primary, #ffffff);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.title {
+  color: var(--color-text-primary, #ffffff);
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.actionButton {
+  display: inline-block;
+  background-color: var(--color-text-primary, #ffffff);
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.actionButton:hover,
+.actionButton:focus-visible {
+  opacity: 0.85;
+  outline: 2px solid var(--color-brand-primary, #e50914);
+}

@@ -1,6 +1,6 @@
 {
   "name": "synapse-monorepo",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.12.0",
   "author": "Augusto Sandim",
