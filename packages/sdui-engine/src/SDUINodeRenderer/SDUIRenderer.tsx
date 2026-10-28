@@ -1,16 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { SDUINode } from "./schema";
-import { useSDUIRegistry, FallbackUnknownNode } from "./registry";
-
-interface ErrorBoundaryProps {
-  nodeId: string;
-  nodeType: string;
-  children: ReactNode;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-}
+import { SDUINode } from "../schema";
+import { useSDUIRegistry, FallbackUnknownNode } from "../registry";
+import { ErrorBoundaryProps, ErrorBoundaryState } from "./types";
 
 export class NodeErrorBoundary extends Component<
   ErrorBoundaryProps,

@@ -1,3 +1,3 @@
 export * from "./registry";
 export * from "./schema";
-export * from "./SDUIRenderer";
+export * from "./SDUINodeRenderer";

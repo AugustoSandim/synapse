@@ -1,9 +1,9 @@
 import React from "react";
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { SDUIProvider } from "./registry";
+import { SDUIProvider } from "../registry";
 import { SDUINodeRenderer } from "./SDUIRenderer";
-import { SDUINode } from "./schema";
+import { SDUINode } from "../schema";
 
 describe("SDUIRenderer Engine", () => {
   const Container: React.FC<{ children?: React.ReactNode }> = ({
