@@ -1,2 +1,2 @@
 export { HeroBanner } from "./HeroBanner";
-export type { HeroBannerProps } from "./types";
+export type { HeroBannerAction, HeroBannerProps } from "./types";

@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React, { Component, ErrorInfo } from "react";
 import { SDUINode } from "../schema";
 import { useSDUIRegistry, FallbackUnknownNode } from "../registry";
 import { ErrorBoundaryProps, ErrorBoundaryState } from "./types";
@@ -31,7 +31,9 @@ export class NodeErrorBoundary extends Component<
 
 export const SDUINodeRenderer: React.FC<{ node: SDUINode }> = ({ node }) => {
   const registry = useSDUIRegistry();
-  const ComponentToRender = registry[node.type];
+  const ComponentToRender = Object.hasOwn(registry, node.type)
+    ? registry[node.type]
+    : undefined;
 
   const renderedChildren =
     node.children && node.children.length > 0
@@ -41,11 +43,20 @@ export const SDUINodeRenderer: React.FC<{ node: SDUINode }> = ({ node }) => {
       : null;
 
   if (!ComponentToRender) {
-    return <FallbackUnknownNode type={node.type} id={node.id} />;
+    return (
+      <>
+        <FallbackUnknownNode type={node.type} id={node.id} />
+        {renderedChildren}
+      </>
+    );
   }
 
   return (
-    <NodeErrorBoundary nodeId={node.id} nodeType={node.type}>
+    <NodeErrorBoundary
+      key={`${node.id}:${node.type}:${JSON.stringify(node.props)}`}
+      nodeId={node.id}
+      nodeType={node.type}
+    >
       <ComponentToRender {...node.props} id={node.id}>
         {renderedChildren}
       </ComponentToRender>

@@ -21,17 +21,20 @@ export const FallbackUnknownNode: React.FC<{ type: string; id: string }> = ({
   type,
   id,
 }) => {
+  console.warn(
+    `[SDUI Warning] Component not registered: ${type} (id: ${id})`,
+  );
+
   if (process.env.NODE_ENV === "development") {
     return (
       <div
         role="alert"
-        aria-live="polite"
         style={{
-          border: "1px dashed #E50914",
+          border: "1px dashed var(--color-brand-primary, #e50914)",
           padding: "8px",
           margin: "4px 0",
           fontSize: "12px",
-          color: "#E50914",
+          color: "var(--color-brand-primary, #e50914)",
           borderRadius: "4px",
         }}
       >

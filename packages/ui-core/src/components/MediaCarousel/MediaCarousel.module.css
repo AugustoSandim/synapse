@@ -16,12 +16,21 @@
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  padding-top: 4px;
   padding-bottom: 8px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
   scrollbar-width: thin;
 }
 
-.card {
+.track > li {
   flex: 0 0 200px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
   background-color: var(--color-surface-card, #181818);
   border: 1px solid var(--color-surface-border, #2a2a2a);
   border-radius: 6px;
@@ -31,14 +40,12 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 120px;
-  cursor: pointer;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
 }
 
-.card:hover,
-.card:focus-visible {
+.card:hover {
   transform: translateY(-4px);
   border-color: var(--color-brand-primary, #e50914);
 }
