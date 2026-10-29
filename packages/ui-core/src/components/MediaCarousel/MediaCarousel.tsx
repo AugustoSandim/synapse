@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./MediaCarousel.module.css";
 import { MediaCarouselProps } from "./types";

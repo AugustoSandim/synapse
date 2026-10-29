@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { HeroBannerProps } from "./types";
 import styles from "./HeroBanner.module.css";

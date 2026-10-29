@@ -1,6 +1,7 @@
-import React, { createContext, ReactNode, useContext } from "react";
+"use client";
 
-export type ComponentRegistryMap = Record<string, React.ComponentType<any>>;
+import React, { createContext, ReactNode, useContext } from "react";
+import { ComponentRegistryMap } from "./types";
 
 const RegistryContext = createContext<ComponentRegistryMap>({});
 
@@ -21,9 +22,7 @@ export const FallbackUnknownNode: React.FC<{ type: string; id: string }> = ({
   type,
   id,
 }) => {
-  console.warn(
-    `[SDUI Warning] Component not registered: ${type} (id: ${id})`,
-  );
+  console.warn(`[SDUI Warning] Component not registered: ${type} (id: ${id})`);
 
   if (process.env.NODE_ENV === "development") {
     return (

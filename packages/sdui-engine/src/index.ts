@@ -1,3 +1,6 @@
-export * from "./registry";
-export * from "./schema";
-export * from "./SDUINodeRenderer";
+export { SDUIProvider, useSDUIRegistry } from "./registry";
+export { SDUIScreenSchema } from "./schema";
+export { SDUINodeRenderer } from "./SDUINodeRenderer";
+
+export type { ComponentRegistryMap } from "./types";
+export type { SDUINode, SDUIScreen } from "./schema";

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Component, ErrorInfo } from "react";
 import { SDUINode } from "../schema";
 import { useSDUIRegistry, FallbackUnknownNode } from "../registry";
